@@ -22,6 +22,7 @@ export BITNAMI_DEBUG="${BITNAMI_DEBUG:-false}"
 # By setting an environment variable matching *_FILE to a file path, the prefixed environment
 # variable will be overridden with the value specified in that file
 discourse_env_vars=(
+    DISCOURSE_ENABLE_LONG_POLLING
     DISCOURSE_DATA_TO_PERSIST
     DISCOURSE_ENABLE_HTTPS
     DISCOURSE_EXTERNAL_HTTP_PORT_NUMBER
@@ -100,6 +101,7 @@ export DISCOURSE_DAEMON_USER="discourse"
 export DISCOURSE_DAEMON_GROUP="discourse"
 
 # Discourse configuration
+export DISCOURSE_ENABLE_LONG_POLLING="${DISCOURSE_ENABLE_LONG_POLLING:-false}"
 export DISCOURSE_ENABLE_HTTPS="${DISCOURSE_ENABLE_HTTPS:-no}"
 export DISCOURSE_EXTERNAL_HTTP_PORT_NUMBER="${DISCOURSE_EXTERNAL_HTTP_PORT_NUMBER:-80}"
 export DISCOURSE_EXTERNAL_HTTPS_PORT_NUMBER="${DISCOURSE_EXTERNAL_HTTPS_PORT_NUMBER:-443}"
